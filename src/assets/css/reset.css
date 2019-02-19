@@ -1,0 +1,131 @@
+@charset "utf-8";
+
+/* 禁止缩放表单 */
+input[type="submit"], input[type="reset"], input[type="button"], input ,textarea,button{
+  resize: none;
+  border: none;
+  outline: none;
+}
+button{
+  cursor: pointer;
+}
+/* 取消链接高亮  */
+a {
+  color: #000;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-user-select: none;
+}
+/*移除箭头*/
+input[type=number] {
+  -moz-appearance:textfield;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+/* 设置HTML5元素为块 */
+article, aside, details, figcaption, figure, footer, header, menu, nav, section {
+  display: block;
+}
+/*解决transition闪烁*/
+.cleartwinkle{
+  -webkit-transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+}
+/* 图片自适应 */
+img {
+  max-width: 100%;
+  -ms-interpolation-mode: bicubic;/*为了照顾ie图片缩放失真*/
+}
+
+/* 初始化 */
+body, div, ul, li, ol, h1, h2, h3, h4, h5, h6, input, textarea, select, p, dl, dt, dd, a, img, button, form, table, th, tr, td, tbody, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font: 14px/1.5 'Microsoft YaHei','宋体', Tahoma, Arial, sans-serif;
+  min-width: 1200px;
+  color: #000;
+  background-color: rgb(247, 246, 246);
+  -webkit-font-smoothing: antialiased;
+}
+em, i ,strong {
+  font-style: normal;
+}
+ul,li{
+  list-style-type: none;
+}
+.clearfix:after {
+  content: "";
+  display: block;
+  visibility: hidden;
+  height: 0;
+  clear: both;
+}
+.clearfix {
+  zoom: 1;
+}
+a {
+  text-decoration: none;
+  font-family: 'Microsoft YaHei', Tahoma, Arial, sans-serif;
+}
+a:hover {
+  text-decoration: none;
+}
+ul, ol {
+  list-style: none;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-family: 'Microsoft YaHei';
+}
+img {
+  border: none;
+}
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+input{
+  font-family: 'Microsoft YaHei';
+}
+/*单行溢出*/
+.one-txt-cut{
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+/*多行溢出 手机端使用*/
+.txt-cut{
+  overflow : hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp:2;
+  -webkit-box-orient: vertical;
+}
+.w50{
+  width: 50%;
+}
+.w25{
+  width: 25%;
+}
+.w20{
+  width: 20%;
+}
+.w33{
+  width: 33.333333%;
+}
+.fl{
+  float: left;
+}
+.fr{
+  float: right;
+}
+.db{
+  display: block !important;
+}
+.dn{
+  display: none;
+}
+
