@@ -1,28 +1,15 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import mutations from './mutations'
-import actions from './actions'
+import VuexPersistence from 'vuex-persist'
 
-
-function getState() {
-  let states = window.sessionStorage.getItem('state')
-  let state
-  try {
-    state = JSON.parse(states) || initState
-  } catch (e) {
-    state = initState
-  }
-  return state;
-}
-
-let initState = {
-  user:{},
-}
-
+const vuexSession = new VuexPersistence({
+  storage: window.sessionStorage
+})
 Vue.use(Vuex)
-let state = getState()
+import user from './modules/user'
 export default new Vuex.Store({
-  state: state,
-  mutations: mutations,
-  actions: actions,
+  modules: {
+    user: user,
+  },
+  plugins: [vuexSession.plugin]
 })
