@@ -1,7 +1,7 @@
 import axios from 'axios'
 import router from '../router/index'
 
-let baseUrl = '/winback-admin/confined'
+let baseUrl = '/fzyq-web/open'
 var instance = axios.create({
   baseURL: baseUrl,
   timeout: 20000,
@@ -26,16 +26,16 @@ instance.interceptors.response.use(
     return response;
   },
   error => {
-    if (error.response) {
-      switch (error.response.status) {
-        case 401:
-          // 返回 401 清除token信息并跳转到登录页面
-          router.replace({
-            path: '/login',
-          })
-      }
+    if (error.response.status == 401) {
+      router.push({
+        path: '/login',
+      })
+      
     }
     return Promise.reject(error)
   }
 );
+
+
 export default instance
+
