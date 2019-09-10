@@ -14,10 +14,10 @@ module.exports = {
       '/fzyq-web': {
         // target: 'http://192.168.100.68:6086',//赵小鸡
         // target: 'http://192.168.100.152:8086',//沈威
-        // target: 'http://192.168.100.129:6086',//冬冬
+        // target: 'http://192.168.100.157:6086',//冬冬
         //target: 'http://supportcloud.360yhl.test',//沈威
         // target: 'http://192.168.100.152:6086',//沈威
-        //target: 'http://192.168.101.157:6086',//小磊
+        // target: 'http://172.17.102.111:6086',//小磊
         // target: 'http://supportcloud.360yhl.test',//沈威
         // target: 'http://192.168.100.152:6086',//沈威
         //target: 'http://192.168.101.157:6086',//小
@@ -26,27 +26,29 @@ module.exports = {
         // target: 'http://192.168.100.129:6086',//冬冬
         // target: 'http://supportcloud2.360yhl.test',//沈威
         // target: 'http://192.168.100.152:6086',//沈威
-        //target: 'http://192.168.101.157:6086',//小磊
+        // target: 'http://192.168.100.157:6086',//小磊
         //  target: 'http://192.168.100.68:6086',//小亚
+        // target: 'http://172.17.102.27:6086',//冬冬
         // target: 'http://supportcloud2.360yhl.test',//沈威
         //  target: 'https://www.360aidata.com',//沈威
-        target: 'http://192.168.100.98:6086',//传奇
-    
+        target: 'http://192.168.1.104:6086',//传奇
+
         changeOrigin: true,
         pathRewrite: {
           '^/fzyq-web': '/fzyq-web'
         }
+      }
     },
 
     // Various Dev Server settings
     host: '0.0.0.0', // can be overwritten by process.env.HOST
-    port: 8080, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
+    port: 8088, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
     autoOpenBrowser: false,
     errorOverlay: true,
     notifyOnErrors: true,
     poll: false, // https://webpack.js.org/configuration/dev-server/#devserver-watchoptions-
 
-    
+
     /**
      * Source Maps
      */
