@@ -16,8 +16,8 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'HelloWorld',
-      component: resolve => require(['../pages/HelloWorld.vue'], resolve),
+      name: 'index',
+      component: resolve => require(['../pages/index.vue'], resolve),
     }
   ]
 })

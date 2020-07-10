@@ -1,18 +1,24 @@
 <template>
-  <div>
-    HelloWorld
+  <div class="index">
   </div>
 </template>
 
 <script>
   export default {
-    name: "HelloWorld",
+    name: "index",
+    components: {},
     data() {
       return {}
+    },
+    methods: {},
+    created() {
+
     },
   }
 </script>
 
 <style scoped lang="scss">
+  .index {
 
+  }
 </style>
